@@ -1,0 +1,54 @@
+/* ==========================================================================
+   ESTILOS HUMANIZADOS - PALETA CÁLIDA EDITORIAL
+   ========================================================================== */
+
+/* Scrollbar sutil y orgánico */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #fbfaf7;
+}
+::-webkit-scrollbar-thumb {
+  background: #d8d3c5;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2d5a43;
+}
+
+/* Transiciones naturales de barras SVG */
+.chart-bar {
+  transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1), y 0.3s cubic-bezier(0.4, 0, 0.2, 1), fill 0.2s ease;
+}
+.chart-bar:hover {
+  fill: #234735 !important;
+  cursor: pointer;
+}
+
+/* Optimización para impresión nativa del Dictamen Pedagógico (Ctrl + P / PDF) */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  header, footer, main {
+    display: none !important;
+  }
+  #modal-report {
+    position: static !important;
+    display: block !important;
+    background: transparent !important;
+    padding: 0 !important;
+  }
+  #modal-report > div {
+    max-width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  #btn-print-report, #btn-close-report {
+    display: none !important;
+  }
+}
